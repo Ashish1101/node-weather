@@ -6,7 +6,7 @@ function submitForm(e){
     const locationAddress = input.value;
     let message = document.getElementById('demo');
     let message1 = document.getElementById('demo1');
-    fetch('http://localhost:4000/weather?address=' + locationAddress).then((response) =>{
+    fetch('/weather?address=' + locationAddress).then((response) =>{
         response.json().then((data) =>{
             if(data.error){
                message.textContent = data.error;
@@ -33,4 +33,4 @@ function convert(e){
 
 }
 
-console.log('Hello Beautiful');
+

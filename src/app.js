@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 const app = express();
+const port = process.env.PORT  || 4000
 
 const forecast = require('./weather/forecast');
 
@@ -61,6 +62,6 @@ app.get('/about', (req,res) =>{
     })
 })
 
-app.listen(4000, () =>{
-    console.log("server has started");
+app.listen(port, () =>{
+    console.log("server has started" + port);
 })
